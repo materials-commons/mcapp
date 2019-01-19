@@ -24,6 +24,7 @@ function createWindow() {
         webPreferences: {webSecurity: false},
     });
 
+    console.log(app.getPath('home'));
     mainWindow.loadURL(winURL);
 
     mainWindow.on('closed', () => {
