@@ -16,9 +16,8 @@
 </template>
 
 <script>
-    import {remote} from 'electron';
+    import api from '../services/api';
 
-    const fs = require('fs');
     export default {
         name: "Home",
         data() {
@@ -27,14 +26,8 @@
             }
         },
         mounted() {
-            console.log('remote.app.getPath("home") =', remote.app.getPath('home'));
-            console.log('fs', fs);
-            fs.readFile('/home/gtarcea/.materialscommons/config.json', (err, data) => {
-                console.log('config.json =', JSON.parse(data));
-            });
-            this.$http.post('https://materialscommons.org/api/v4/ui/getProjectsForUser?apikey=472abe203cd411e3a280ac162d80f1bf').then(
+            api.post('/v4/ui/getProjectsForUser').then(
                 (projects) => {
-                    console.log(projects);
                     this.projects = projects.data;
                 },
                 err => console.log(err)
