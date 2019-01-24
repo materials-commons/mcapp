@@ -17,6 +17,7 @@
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     "test": "npm run unit && npm run e2e",
     "unit": "karma start test/unit/karma.conf.js",
+    "electron:rebuild": "./node_modules/.bin/electron-rebuild -w sqlite3 -p",
     "postinstall": ""
   },
   "build": {
@@ -55,9 +56,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "better-sqlite3": "^5.4.0",
     "bootstrap": "^4.2.1",
+    "electron-rebuild": "^1.8.2",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
+    "sql-template-strings": "^2.2.2",
+    "sqlite": "^3.0.0",
+    "sqlite3": "^4.0.6",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.1",

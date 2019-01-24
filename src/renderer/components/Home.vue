@@ -1,14 +1,17 @@
 <template>
     <div>
+        <h3>Projects</h3>
         <table class="table">
             <thead>
             <tr>
                 <th>Name</th>
+                <th>Path</th>
             </tr>
             </thead>
             <tbody>
             <tr v-for="project in projects">
                 <td>{{project.name}}</td>
+                <td>/home/gtarcea/projects/{{project.name}}</td>
             </tr>
             </tbody>
         </table>

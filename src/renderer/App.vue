@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <nav class="navbar navbar-dark fixed-top bg-nav p-0 shadow">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">MaterialsCommons</a>
+            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">MaterialsCommons Explorer</a>
             <div class="d-flex justify-content-end">
                 <input class="form-control w-75 form-rounded" type="text" placeholder="Search" aria-label="Search">
 
@@ -30,32 +30,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <i class="fa-fw fas fa-address-book mr-2"></i>
-                                    Teams
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
                                     <i class="fa-fw fas fa-project-diagram mr-2 "></i>
                                     Projects
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-fw fas fa-tasks mr-2"></i>
-                                    Tasks
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-fw fas fa-folder mr-2"></i>
-                                    Files
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-fw fas fa-users-cog mr-2"></i>
-                                    Users
                                 </a>
                             </li>
                             <li class="nav-item">
