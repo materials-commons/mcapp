@@ -23,8 +23,6 @@
 <script>
     import rest from '../services/rest';
     import {getDirFromUser} from '../services/api';
-    // import currentWindowTracker from '../services/current-window';
-    // import {ipcRenderer} from 'electron';
 
     export default {
         name: "Home",
@@ -43,11 +41,6 @@
                 (projects) => {
                     projects.data.forEach(p => p.location = null);
                     this.projects = projects.data;
-                    // getDirFromUser().then(dir => console.log('selected dir', dir));
-                    // console.log('currentWindowTracker.currentWindow', currentWindowTracker.currentWindow);
-                    // ipcRenderer.send('getDirFromUser', currentWindowTracker.currentWindow.id);
-                    // ipcRenderer.on('selectedDir', (event, data) => console.log(data));
-                    // mainProcess.getDirFromUser(remote.getCurrentWindow());
                 },
                 err => console.log(err)
             )
