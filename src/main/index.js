@@ -12,9 +12,8 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 let db;
-sqlite.open('/home/gtarcea/.materialscommons/mcexplorer.sqlite').then(
-    (d) => db = d
-);
+let dbpath = `${app.getPath('home')}/.materialscommons/db.sqlite`;
+sqlite.open(dbpath).then((database) => db = database);
 
 let mainWindow;
 const winURL = process.env.NODE_ENV === 'development'
